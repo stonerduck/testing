@@ -1,4 +1,4 @@
-# By @Color
+# By @Duck
 
 import turtle
 import time
@@ -12,7 +12,7 @@ high_score = 0
 
 # Set up the screen
 wn = turtle.Screen()
-wn.title("Made by color#1000")
+wn.title("COLOR IS BAD")
 wn.bgcolor("green")
 wn.setup(width=600, height=600)
 wn.tracer(0) # Turns off the screen updates
