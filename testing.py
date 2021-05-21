@@ -11,7 +11,7 @@ high_score = 0
 #setupscreen
 wn = turtle.Screen()
 wn.title("i'm cooler than color")
-wn.setup(width=3840, height=2160) 
+wn.setup(width=3840, height=2160)
 wn.tracer(0)
 
 head = turtle.Turtle()
@@ -45,9 +45,9 @@ def go_up():
 
 def go_down():
        if head.direction != "up":
-              head.direction = "down" 
+              head.direction = "down"
 
-def go_left 
+def go_left():
        if head.direction != "up":
               head.direction = "down"
 
