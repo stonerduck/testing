@@ -1,19 +1,23 @@
+# By @Color
+
 import turtle
 import time
 import random
 
 delay = 0.1
 
-#score
+# Score
 score = 0
 high_score = 0
 
-#setupscreen
+# Set up the screen
 wn = turtle.Screen()
-wn.title("i'm cooler than color")
-wn.setup(width=3840, height=2160)
-wn.tracer(0)
+wn.title("Made by color#1000")
+wn.bgcolor("green")
+wn.setup(width=600, height=600)
+wn.tracer(0) # Turns off the screen updates
 
+# Snake head
 head = turtle.Turtle()
 head.speed(0)
 head.shape("circle")
@@ -22,34 +26,38 @@ head.penup()
 head.goto(0,0)
 head.direction = "stop"
 
+# Snake food
 food = turtle.Turtle()
-food.speed()
-food.shape("square")
-food.color("orange")
+food.speed(0)
+food.shape("circle")
+food.color("red")
 food.penup()
+food.goto(0,100)
 
 segments = []
 
-#pen
+# Pen
 pen = turtle.Turtle()
 pen.speed(0)
 pen.shape("square")
 pen.color("white")
-
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
 pen.write("Score: 0  High Score: 0", align="center", font=("Courier", 24, "normal"))
 
-#functions
+# Functions
 def go_up():
-       if head.direction != "down":
-              head.direction = "up"
+    if head.direction != "down":
+        head.direction = "up"
 
 def go_down():
-       if head.direction != "up":
-              head.direction = "down"
+    if head.direction != "up":
+        head.direction = "down"
 
 def go_left():
-       if head.direction != "up":
-              head.direction = "down"
+    if head.direction != "right":
+        head.direction = "left"
 
 def go_right():
     if head.direction != "left":
@@ -72,14 +80,14 @@ def move():
         x = head.xcor()
         head.setx(x + 20)
 
-#keyboardbindings
-wn.listen
+# Keyboard bindings
+wn.listen()
 wn.onkeypress(go_up, "w")
 wn.onkeypress(go_down, "s")
 wn.onkeypress(go_left, "a")
 wn.onkeypress(go_right, "d")
 
-#maingameloop
+# Main game loop
 while True:
     wn.update()
 
