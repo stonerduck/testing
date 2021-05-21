@@ -14,7 +14,7 @@ high_score = 0
 wn = turtle.Screen()
 wn.title("COLOR IS BAD")
 wn.bgcolor("green")
-wn.setup(width=600, height=600)
+wn.setup(width=3840, height=2160)
 wn.tracer(0) # Turns off the screen updates
 
 # Snake head
